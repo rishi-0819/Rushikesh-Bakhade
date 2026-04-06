@@ -292,13 +292,16 @@ export const Hero = () => {
     }}>
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
+              <a
+               href="/public/Rushikesh_Bakhade_Resume.pdf"
+  download="Rushikesh_Bakhade_CV.pdf"
+>
+  <AnimatedBorderButton>
+    <Download className="w-5 h-5" />
+    Download CV
+  </AnimatedBorderButton>
+</a>
             </div>
-
             {/* Social Links */}
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me:</span>
