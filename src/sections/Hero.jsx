@@ -265,7 +265,7 @@ export const Hero = () => {
 
             {/* Heading */}
             <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in animation-delay-100">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight ... animate-fade-in animation-delay-100">
                 {/* ✅ fixed: reduced font size so heading doesn't wrap per word */}
                 Building{" "}
                 <span className="text-primary glow-text">
@@ -284,7 +284,7 @@ export const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 animate-fade-in animation-delay-300">
               {/* ✅ fixed: "animation-dely-300" → "animation-delay-300" */}
               <Button size="lg" onClick={() => {
       const target = document.querySelector("#contact");
@@ -293,7 +293,7 @@ export const Hero = () => {
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
               <a
-               href="/public/Rushikesh_Bakhade_Resume.pdf"
+               href="/Rushikesh_Bakhade__Resume.pdf"
   download="Rushikesh_Bakhade_CV.pdf"
 >
   <AnimatedBorderButton>
@@ -303,7 +303,7 @@ export const Hero = () => {
 </a>
             </div>
             {/* Social Links */}
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+            <div className="flex flex-wrap items-center gap-3 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me:</span>
               {[
                 { icon: Github,    href: "https://github.com/rishi-0819" },
@@ -327,7 +327,7 @@ export const Hero = () => {
 
           {/* ── Right Column — Profile Image ─────────────── */}
           {/* ✅ fixed: removed the \ backslash before <div */}
-          <div className="relative animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300 hidden sm:block">
             <div className="relative max-w-md mx-auto">
               {/* ✅ fixed: "max-auto" → "mx-auto" */}
 

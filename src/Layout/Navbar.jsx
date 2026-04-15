@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 
 
 const navLinks = [
-  {href: "about", label:"About"},
-  {href: "projects", label:"Projects"},
-  {href: "experience", label:"Experience"},
-  {href: "testimonials", label:"Testimonials"},
+  {href: "#about", label:"About"},
+  {href: "#projects", label:"Projects"},
+  {href: "#experience", label:"Experience"},
+  {href: "#testimonials", label:"Testimonials"},
 ]
 
 export const Navbar = () => {
@@ -33,7 +33,7 @@ export const Navbar = () => {
           <div className="glass rounded-full px-2 py-1 flex items-center gap-2">
             {navLinks.map((link, index) => (
               <a 
-                href={`#${link.href}`}
+                href={`${link.href}`}
                 key={index}
                    className="px-4 py-2 text-sm text-muted-foreground hover:text-white rounded-xl transition-all duration-300"
               >
@@ -64,7 +64,36 @@ export const Navbar = () => {
       </nav>
 
         {/* Mobile Menu */}
-        { isMobileMenuOpen && (<div className="md:hidden glass-strong animated-fade-in">
+        {isMobileMenuOpen && (
+  <div className="md:hidden glass-strong animated-fade-in">
+    <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+      {navLinks.map((link, index) => (
+        <button
+          key={index}
+          onClick={() => {
+            setIsMobileMenuOpen(false);
+            const target = document.querySelector(link.href); // e.g. "#about"
+            if (target) target.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="text-lg text-left text-muted-foreground hover:text-foreground py-2"
+        >
+          {link.label}
+        </button>
+      ))}
+
+      <Button
+        onClick={() => {
+          setIsMobileMenuOpen(false);
+          const target = document.querySelector("#contact");
+          if (target) target.scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        Contact Me
+      </Button>
+    </div>
+  </div>
+)}
+        {/* { isMobileMenuOpen && (<div className="md:hidden glass-strong animated-fade-in">
            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
             {navLinks.map((link, index) => (
               <a 
@@ -79,7 +108,7 @@ export const Navbar = () => {
 
             <Button onClick={() => setIsMobileMenuOpen(false)}>Contact Me</Button>
            </div>
-        </div>)}
+        </div>)} */}
     </header>
   )
 };

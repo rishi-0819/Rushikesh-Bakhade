@@ -1,6 +1,15 @@
 const experiences = [
- {
+  {
      period: " Febrauary 2025 — Present",
+     role: "Software Developer",
+     company: "HighBrow TechnoSoftware PVT.LTD.",
+     description: 
+                 "Create and Developed responsive websites tailored to client requirements and business goals.Monitored website performance and uptime to ensure a smooth and reliable user experience Optimized websites for speed and SEO to improve visibility and ranking on Google search results.",
+     technologies: ["WordPress","React","JavaScript", "Node.js", "MongoDB", "SQL"],
+     current: true,
+},
+  {
+     period: " February 2025 — February 2026",
      role: "Software Developer ",
      company: "Digivik Business Solutions Pvt. Ltd.",
      description: 

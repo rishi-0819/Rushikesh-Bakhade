@@ -1,7 +1,16 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import {AnimatedBorderButton} from "@/components/AnimatedBorderButton";
 const projects = [
-   {
+  {
+    title:"Saparito Hospitality Services",
+    description:"Saparito Hospitality Services is an authorized aggregator for HP Paani, a packaged drinking water brand under HPCL (Hindustan Petroleum), operating since May 2025.",
+    image :"/projects/dash4.png.png",
+    tags : ["WordPress", "MY SQL"],
+    link: "https://saparitoindia.in/",
+    github: "#"
+   }, 
+  
+  {
     title:"Fly and Tech",
     description:"A comprehensive Drone platform with smart drones and drone cameras for agriculture, surveillance and delivery",
     image :"/projects/dash3.png.png",
